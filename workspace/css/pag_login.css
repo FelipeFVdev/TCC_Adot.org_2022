@@ -1,0 +1,220 @@
+body{
+    background-color: #F0F8FF;
+    color: #4C79D5;
+    margin: 0;
+}
+
+input{
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    height: 4vh;
+    color: #4C79D5;
+    margin-left: 8%;
+}
+
+input:focus{
+    border-color: #4C79D5;
+}
+
+label{
+    font-size: 20px;
+    margin-left: 8%;
+}
+
+#btnLogin{
+    width: 50%;
+    height: 30px;
+    margin-left: 25%;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4C79D5;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+#btnCadInst, #btnCadUsu{
+    width: 65%;
+    height: 50px;
+    margin-left: 19%;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4C79D5;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+#login{
+    width: 40%; 
+    height: 50vh;
+    margin-left: 35px; 
+    margin-top: 25px; 
+    padding-top: 9%;
+    padding: 30px;
+    background-color: #66C4A9;
+    border-radius: 5px;
+}
+
+#cadastro{
+    width: 40%; 
+    margin-right: 35px; 
+    margin-top: 25px; 
+    padding: 30px;
+    padding-top: 9%;
+    /* background-color: #66C4A9; */
+    border-radius: 5px;
+}
+
+#loginCadastro{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu{
+    width: 100%;
+    height: 13vh;
+    background-color: #4C79D5;
+    padding: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#busca{
+    width: 30%;
+    margin-top: 30px;
+    margin-left: 35%;
+}
+
+#busca:focus{
+    color: #66C4A9;
+}
+
+#iconUsu{
+    padding: 0px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#esqueciSenha{
+    font-size: 18px;
+    text-align: center;
+    color: #98112e;
+    text-decoration: none;
+}
+
+#esqueciSenha:hover{
+    color: #1a6f3a;
+    text-decoration: underline;
+}
+
+#topoContainer{
+    background-color: #1a6f3a;
+}
+
+#btnBuscar{
+    background-color: #fecc68;
+}
+#btnBuscar:hover{
+    background-color: #98112e;
+}
+i{
+    color: white;
+}
+
+#logoLogin:hover{
+    opacity: 0.8;
+}
+
+#btnLogar{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition-duration: 0.3s;
+    background-color: #1a6f3a;
+    color: white;
+}
+
+#btnLogar:hover{
+    background-color: #98112e;
+}
+
+#btnNovoCadastro{
+    width: 60%;
+    height: 10vh;
+    margin-left: 22%;
+    margin-top: 10%;
+    background-color: #1a6f3a;
+    transition-duration: 0.3s;
+}
+
+#btnNovoCadastro:hover{
+    background-color: #98112e;
+}
+
+#jaCadastroDiv, #naoCadastroDiv{
+    width: 50%;
+    float: left;
+}
+
+#jaCadastro, #naoCadastro{
+    text-align: center;
+    margin-top: 10%;
+}
+
+#divEmail, #divSenha{
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#esqueciSenha{
+    font-size: 18px;
+    text-align: center;
+    color: #98112e;
+    text-decoration: none;
+}
+
+#logoLogin{
+    width: 50px;
+    height: 50px;
+}
+
+#linkBtnCadastro{
+    color: white;
+    text-decoration: none;
+}
+
+#linkBtnCadastro:hover{
+    color: #1a6f3a;
+}
+
+@media only screen and (max-width: 660px) {
+    #jaCadastro, #naoCadastro{
+        margin-top: 5%;
+    }
+    
+    #jaCadastroDiv, #naoCadastroDiv{
+        width: 100%;
+    }
+
+    #btnNovoCadastro{
+        width: 70%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    #usuario{
+        font-size: 10px;
+    }
+
+    #logo{
+        width: 38px;
+        height: 38px;
+    }
+}
