@@ -4,24 +4,24 @@ body{
     margin: 0;
 }
 
-input{
+/* input{
     border-radius: 5px;
     border: none;
     width: 80%;
     height: 4vh;
     color: #4C79D5;
     margin-left: 8%;
-}
+} */
 
 input:focus{
     border-color: #4C79D5;
 }
 
-label{
+/* label{
     font-size: 20px;
     margin-left: 8%;
-}
-
+} */
+/* 
 #btnLogin{
     width: 50%;
     height: 30px;
@@ -33,9 +33,9 @@ label{
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-}
+} */
 
-#btnCadInst, #btnCadUsu{
+/* #btnCadInst, #btnCadUsu{
     width: 65%;
     height: 50px;
     margin-left: 19%;
@@ -46,7 +46,7 @@ label{
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-}
+} */
 
 #login{
     width: 40%; 
@@ -100,17 +100,17 @@ label{
     margin-right: 15px;
 }
 
-#esqueciSenha{
+/* #esqueciSenha{
     font-size: 18px;
     text-align: center;
     color: #98112e;
     text-decoration: none;
-}
+} */
 
-#esqueciSenha:hover{
+/* #esqueciSenha:hover{
     color: #1a6f3a;
     text-decoration: underline;
-}
+} */
 
 #topoContainer{
     background-color: #1a6f3a;
@@ -130,7 +130,7 @@ i{
     opacity: 0.8;
 }
 
-#btnLogar{
+/* #btnLogar{
     width: 30%;
     margin-left: 35%;
     margin-top: 5%;
@@ -138,11 +138,11 @@ i{
     transition-duration: 0.3s;
     background-color: #1a6f3a;
     color: white;
-}
+} */
 
-#btnLogar:hover{
+/* #btnLogar:hover{
     background-color: #98112e;
-}
+} */
 
 #btnNovoCadastro{
     width: 60%;
@@ -173,12 +173,12 @@ i{
     margin: 0 auto;
 }
 
-#esqueciSenha{
+/* #esqueciSenha{
     font-size: 18px;
     text-align: center;
     color: #98112e;
     text-decoration: none;
-}
+} */
 
 #logoLogin{
     width: 50px;

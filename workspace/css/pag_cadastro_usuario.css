@@ -4,63 +4,104 @@ body{
     margin: 0;
 }
 
-input{
+/* input{
     border-radius: 5px;
     border: none;
     width: 80%;
     height: 4vh;
     color: #4C79D5;
     margin-left: 8%;
-}
+} */
 
 input:focus{
     border-color: #4C79D5;
 }
 
-label{
+/* label{
     font-size: 20px;
     margin-left: 8%;
+} */
+
+.usuario_content{
+    display: flex;
+    margin-left: 10%;
+  }
+
+.usuario_img{
+    width: 32%;
 }
 
-#btnLogin{
-    width: 50%;
-    height: 30px;
-    margin-left: 25%;
-    margin-top: 15px;
-    border-radius: 5px;
-    border: none;
-    background-color: #4C79D5;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+.usuario_info{
+    padding-left: 5rem;
 }
+
+#menu{
+    width: 100%;
+    height: 13vh;
+    background-color: #4C79D5;
+    padding: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#usuario_foto{
+    width: 100%;
+    padding: 0px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#btnSalvarCadastro{
+    margin-top: 5%;
+    width: 100%;
+    height: 50px
+
+}
+
+
+#topoContainer{
+    background-color: #1a6f3a;
+}
+
 
 i{
     color: white;
 }
-#btnCadastrar{
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: #1a6f3a;
-    color: white;
-}
-#logoCadastro:hover{
+
+#logoLogin:hover{
     opacity: 0.8;
 }
-#btnCadastrar:hover{
-    background-color: #98112e;
-}
 
-#logoCadastro{
+
+
+#logoLogin{
     width: 50px;
     height: 50px;
 }
 
-@media only screen and (max-width: 480px){
-  
-    input, select{
-        width: 90%;
+#linkBtnCadastro{
+    color: white;
+    text-decoration: none;
+}
+
+#linkBtnCadastro:hover{
+    color: #1a6f3a;
+}
+
+@media only screen and (max-width: 660px) {
+    #jaCadastro, #naoCadastro{
+        margin-top: 5%;
+    }
+    
+    #jaCadastroDiv, #naoCadastroDiv{
+        width: 100%;
+    }
+
+    #btnNovoCadastro{
+        width: 70%;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
     #usuario{

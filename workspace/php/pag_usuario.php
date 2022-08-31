@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="../css/pag_usuario.css">
     <link rel="stylesheet" href="../css/styles.css">
     <!-- js -->
-    <script lang="javascript" src="../js/redirecionaLogin.js"></script>    
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,107 +40,49 @@
     <body>
 
         <!-- ========== TUDO QUE TEM "#" PRECISA COLOCAR UM LINK E MUDAR O PHP ========== -->
-        <div class="header">            
-            <nav class="navbar navbar-light m-3" style="background-color: #1a6f3a;">                
-                <div class="container-fluid" id="header_conteainer">
-                    <a href="#"><img src="img/" id="logo" /></a>
-                    <div class="headerTitle"><h2>Adot.org</h2></div>
-
-                        <!-- Barra de Consultas -->
-                        <div class="menu">
-                            <nav class="navbar navbar-expand-lg navbar-dark m-3" style="background-color: #98112e;">
-                                <div class="container-fluid text-xs-center">
-                                    <!-- <a class="navbar-brand" href="#">Menu</a> -->
-                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
-                                        aria-expanded="false" aria-label="Toggle navigation">
-
-                                        <span class="navbar-toggler-icon"></span>
-                                        </button>
-
-                                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                        <div class="navbar-nav" id="itensMenu">
-                                            <a class="nav-link active" aria-current="page" href="pag_inicial.php">Página Inicial</a>
-
-                                            <a class="nav-link active" aria-current="page" href="pag_instituicao.php" name="#">Página Instituições</a>
-
-                                            <a class="nav-link active" aria-current="page" href="#">Página Animais</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-
-                        <?php
-                            if(isset($_SESSION["nome_usuario"])==false){
-                                echo "<button type='button' class='btn' id='btnFazerLogin' style='background-color: #fecc68; color: white;' onclick='redirecionaLogin();'>Logar</button>";
-                            }else{                        
-                                $nome_usuario = $_SESSION["nome_usuario"];
-                                echo "<div class='dropdown'>";
-                                echo "<button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false' style='background-color: #fecc68;'>Olá, $nome_usuario</button>";
-                                echo  "<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>";
-                                echo "<li><a class='dropdown-item' href='pag_usuario.php'>Meus dados</a></li>";
-                                echo "<li><a class='dropdown-item' href='sair.php'>Sair</a></li>";
-                                echo "</ul></div>";
-                            }
-                        ?>
-                </div>                
-            </nav>          
-        </div>
+        <?php
+            require_once './partials/common.php';
+        ?>
         
         <div class="usuario_container container">
             <div class="usuario_content">
-                <div class="usuario_img">
-                    <img src="../img/fotoPerfil.png" alt="" id="usuario_foto">
-                    <a href="pag_alt_dados">
-                        <button type="button" class="btn" id="btnAltCadastrar" name="btnAltCadastrar">Alterar Cadastro</button>  
-                    </a>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="usuario_img">
+                            <img src="../img/fotoPerfil.png" alt="" id="usuario_foto">
+                            
+                            <a href="pag_alt_dados.php">
+                                <button type="button" class="btn btn-primary mt-3 mb-1" id="btnAltCadastrar" name="btnAltCadastrar">Alterar Cadastro</button>  
+                            </a>
+                            <br>
+                            <a href="pag_alt_senha">
+                                <button type="button" class="btn btn-primary mb-1" id="btnAltSenha" name="btnAltSenha">Alterar Senha</button>                        
+                            </a>                 
+                            <br>
+                            <form method="post" onsubmit="return confirm('Você tem certeza que deseja apagar este perfil?');" action="pag_usuario.php?deletar=<?php echo $_SESSION['id'];?>">
+                                <button type="submit" class="btn btn-danger" id="btnExcluir" name="btnExcluir">Excluir Perfil</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-8">                            
+                        <div class="usuario_info" style="padding: 0 15px 0 15px;width: 70%">
+                            <label>Nome</label> 
+                            <input  type="text" class="form-control" id="txtNome" name="nome_usuario" disabled="true" value="<?php echo $_SESSION["nome_usuario"];?>"/>
 
-                    <br>
+                            <label>E-mail</label>
+                            <input type="email" class="form-control" id="txtEmail" name="email_usuario" disabled="true" value="<?php echo $_SESSION["email_usuario"];?>"/>
 
-                    <a href="pag_alt_senha">
-                        <button type="button" class="btn" id="btnAltSenha" name="btnAltSenha">Alterar Senha</button>                        
-                    </a>
+                            <label>Endereço</label>
+                            <input type="text" class="form-control" id="txtEndereco" name="endereco_usuario" disabled="true" value="<?php echo $_SESSION["endereco_usuario"];?>"/>
 
-                    <br>
-
-                    <a href="pag_usuario.php?deletar=<?php echo $_SESSION['id'];-?>"><button type="button" class="btn" id="btnExcluir" name="btnExcluir" onclick="dsadsa();">Excluir Perfil</button></a> 
+                            <label>Telefone</label>
+                            <input type="text" class="form-control" id="nrTelefone" name="telefone_usuario" disabled="true" value="<?php echo $_SESSION["telefone_usuario"];?>"/>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- <div class="usuario_botoes">
-                    <a href="pag_alt_dados">
-                        <button type="button" class="btn" id="btnAltCadastrar" name="btnAltCadastrar">Alterar Cadastro</button>  
-                    </a>
-
-                    <br>
-
-                    <a href="pag_alt_senha">
-                        <button type="button" class="btn" id="btnAltSenha" name="btnAltSenha">Alterar Senha</button>                        
-                    </a>
-
-                    <br>
-
-                    <button type="button" class="btn" id="btnExcluir" name="btnExcluir" onclick="exluir();">Exluir Perfil</button>                        
-
-                </div> -->
-
-                <div class="usuario_info">
-                    <label>Nome</label> 
-                    <input type="text" class="form-control" id="txtNome" name="nome_usuario" value="<?php echo $_SESSION["nome_usuario"];?>"/>
-
-                    <label>E-mail</label>
-                    <input type="email" class="form-control" id="txtEmail" name="email_usuario" value="<?php echo $_SESSION["email_usuario"];?>"/>
-
-                    <label>Endereço</label>
-                    <input type="text" class="form-control" id="txtEndereco" name="endereco_usuario" value="<?php echo $_SESSION["endereco_usuario"];?>"/>
-
-                    <label>Telefone</label>
-                    <input type="text" class="form-control" id="nrTelefone" name="telefone_usuario" value="<?php echo $_SESSION["telefone_usuario"];?>"/>
-                </div>
-
             </div>
             <?php
+            
               if(isset($_GET["deletar"])) excluir();{
                 
               }
@@ -151,22 +92,13 @@
     </body>
 </html>
 
-<?php function excluir(){
-    $id = $_GET['deletar'];
-    $con  = new mysqli("localhost", "root", "", "tcc");
-    $sql = "delete from usuario where id = $id";
-    mysqli_query($con, $sql);
-    echo "<script lang='javascript'>window.location.href='pag_inicial.php';</script>";
-    mysqli_close($con);
-
-}
-
-?>
-
-
-
-<script lang='javascript'>
-    function redirecionaLogin(){
-        window.location.href='pagina_login.php';
+<?php 
+    function excluir(){
+        $id = $_GET['deletar'];
+        $con  = new mysqli("localhost", "root", "", "tcc");
+        $sql = "delete from usuario where id = $id";
+        mysqli_query($con, $sql);
+        echo "<script lang='javascript'>window.location.href='sair.php';</script>";
+        mysqli_close($con);
     }
-</script>
+?>

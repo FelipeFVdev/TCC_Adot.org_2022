@@ -25,7 +25,7 @@
 
         <!-- ========== TUDO QUE TEM "#" PRECISA COLOCAR UM LINK E MUDAR O PHP ========== -->
         <div class="header">            
-            <nav class="navbar navbar-light m-3" style="background-color: #1a6f3a;">                
+            <nav class="navbar navbar-light mb-3" style="background-color: #1a6f3a;">                
                 <div class="container-fluid" id="header_conteainer">
                     <a href="#"><img src="img/" id="logo" /></a>
 
@@ -49,7 +49,7 @@
 
                                             <a class="nav-link active" aria-current="page" href="#">Página Animais</a>
 
-                                            <a class="nav-link active" aria-current="page" href="#">Meus Dados</a>
+                                            <a class="nav-link active" aria-current="page" href="pag_usuario.php">Meus Dados</a>
 
                                         </div>
                                     </div>
@@ -73,7 +73,7 @@
                             if(isset($_SESSION["nome_usuario"])==false){
                                 echo "<button type='button' class='btn' id='btnFazerLogin' style='background-color: #fecc68; color: white;' onclick='redirecionaLogin();'>Logar</button>";
                             }else{                        
-                                $nome_usuario = $_SESSION["nome_usuario"];
+                                $nome_usuario = explode(" ", $_SESSION["nome_usuario"])[0];
                                 echo "<div class='dropdown'>";
                                 echo "<button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false' style='background-color: #fecc68;'>Olá, $nome_usuario</button>";
                                 echo  "<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>";

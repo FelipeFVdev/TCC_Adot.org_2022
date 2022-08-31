@@ -4,20 +4,20 @@ body{
     margin: 0;
 }
 
-input{
+/* input{
     border-radius: 5px;
     border: none;
     width: 80%;
     height: 4vh;
     color: #4C79D5;
     margin-left: 8%;
-}
+} */
 
 input:focus{
     border-color: #4C79D5;
 }
 
-label{
+/* label{
     font-size: 20px;
     margin-left: 8%;
 }
@@ -29,7 +29,7 @@ label{
 
 .usuario_img{
     width: 32%;
-}
+} */
 
 .usuario_info{
     padding-left: 5rem;
