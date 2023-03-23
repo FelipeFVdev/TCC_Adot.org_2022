@@ -119,7 +119,7 @@
                             loading="lazy"
                             allowfullscreen
                             referrerpolicy="no-referrer-when-downgrade"
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBPBCMIKFAt8yQ765w3zcZt6mhQXLgzg7I
+                            src="https://www.google.com/maps/embed/v1/place?key={faltakey}
                                 &q=R.+das+Rosas+100+-+Mirandópolis,+São+Paulo+-+SP">
                         </iframe>
                     </div>
