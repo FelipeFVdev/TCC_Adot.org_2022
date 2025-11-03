@@ -1,0 +1,24 @@
+@media only screen and (max-width: 660px) {
+    #jaCadastro, #naoCadastro{
+        margin-top: 5%;
+    }
+    
+    #jaCadastroDiv, #naoCadastroDiv{
+        width: 100%;
+    }
+
+    #btnNovoCadastro{
+        width: 70%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    #usuario{
+        font-size: 10px;
+    }
+
+    #logo{
+        width: 38px;
+        height: 38px;
+    }
+}

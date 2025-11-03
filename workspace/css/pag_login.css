@@ -1,0 +1,76 @@
+#btnCadInst, #btnCadUsu{
+    width: 65%;
+    height: 50px;
+    margin-left: 19%;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+#login{
+    width: 40%; 
+    height: 50vh;
+    margin-left: 35px; 
+    margin-top: 25px; 
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#cadastro{
+    width: 40%; 
+    margin-right: 35px; 
+    margin-top: 25px; 
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#loginCadastro{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#esqueciSenha{
+    text-align: center;
+    text-decoration: none;
+}
+
+#jaCadastroDiv, #naoCadastroDiv{
+    width: 40%;
+    float: left;
+    margin-top: 25px;
+    margin-left: 35px;
+    padding: 30px;
+}
+
+#jaCadastro, #naoCadastro{
+    text-align: center;
+}
+
+#divEmail, #divSenha{
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 660px) {
+    #jaCadastro, #naoCadastro{
+        margin-top: 5%;
+    }
+    
+    #jaCadastroDiv, #cadastro{
+        width: 80%;
+    }
+
+    #jaCadastroDiv{
+        margin-left: 0;
+    }
+
+    #cadastro{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
